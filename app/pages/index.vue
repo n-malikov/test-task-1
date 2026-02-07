@@ -1,6 +1,6 @@
 <template>
   INDEX PAGE
-  <FormsFeedback></FormsFeedback>
+  <SectionsFeedback></SectionsFeedback>
 </template>
 
 <script>

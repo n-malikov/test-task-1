@@ -1,5 +1,5 @@
 <template>
-  INDEX PAGE
+  <SectionsAdvantages></SectionsAdvantages>
   <SectionsFeedback></SectionsFeedback>
 </template>
 

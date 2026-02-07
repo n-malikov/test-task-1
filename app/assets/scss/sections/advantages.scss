@@ -1,0 +1,181 @@
+.advantages {
+    padding: 92px 0;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 42px;
+
+        &-title {
+            max-width: 520px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 44px;
+            line-height: 53px;
+            color: #000000;
+
+            &::before {
+                margin-bottom: 10px;
+                display: block;
+                content: "Почему я?";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 29px;
+                color: #8945F7;
+            }
+        }
+
+        &-desc {
+            max-width: 560px;
+            margin-top: 55px;
+            margin-left: 30px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 27px;
+            color: #000000;
+        }
+    }
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 64.1% 34.7%;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 21px;
+        justify-content: space-between;
+
+        &-first {
+            display: grid;
+            grid-template-columns: 58.6% 39.6%;
+            justify-content: space-between;
+        }
+
+        &-second {
+            display: grid;
+            grid-column: 2;
+            grid-row: 1/3;
+        }
+
+        &-third {
+            display: grid;
+            grid-template-columns: 39.6% 58.6%;
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        min-height: 18.1rem;
+        padding: 34px 48px;
+        border-radius: 50px;
+        background: #8945F7;
+
+        &-title {
+            margin-bottom: 10px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFFFFF;
+        }
+
+        &-desc {
+            max-width: 365px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #F7F4FF;
+        }
+
+        &-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .icon {
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &-1 {
+            .icon {
+                right: 1%;
+                bottom: 0;
+                width: 336px;
+                //width: 51%;
+                height: 274px;
+                //height: 94.5%;
+                background-image: url('~/assets/images/sections/advantages/01.svg');
+            }
+        }
+
+        &-2 {
+            padding-left: 40px;
+            background: #C8B6FF;
+
+            .icon {
+                right: 3%;
+                bottom: 0;
+                width: 260px;
+                //width: 58.3%;
+                height: 217px;
+                //height: 75.1%;
+                background-image: url('~/assets/images/sections/advantages/02.svg');
+            }
+        }
+
+        &-3 {
+            background: #8945F7;
+
+            .icon {
+                right: 9%;
+                bottom: 0;
+                width: 508px;
+                height: 484px;
+                background-image: url('~/assets/images/sections/advantages/03.svg');
+            }
+        }
+
+        &-4 {
+            padding-left: 40px;
+            background: #C8B6FF;
+
+
+            .icon {
+                right: 4%;
+                bottom: 0;
+                width: 392px;
+                height: 212px;
+                background-image: url('~/assets/images/sections/advantages/04.svg');
+            }
+        }
+
+        &-5 {
+            padding-left: 40px;
+            padding-top: 32px;
+            border: 2px solid #8945F7;
+            background: #fff;
+
+            .advantages__item-title,
+            .advantages__item-desc {
+                color: #000000;
+            }
+
+            .icon {
+                right: 0;
+                bottom: 0;
+                width: 368px;
+                height: 227px;
+                background-image: url('~/assets/images/sections/advantages/05.svg');
+            }
+        }
+    }
+
+
+}
+

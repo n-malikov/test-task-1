@@ -4,11 +4,16 @@
       <UInput v-model="state.name" />
     </UFormField>
 
-    <UFormField label="Phone" name="phone">
-      <UInput v-model="state.phone" type="tel" />
+    <UFormField label="Телефон" name="phone">
+      <UInput
+          v-model="state.phone"
+          type="tel"
+          placeholder="+7 (___) ___-__-__"
+          v-maska="phoneMask"
+      />
     </UFormField>
 
-    <UFormField label="Message" name="message">
+    <UFormField label="Сообщение" name="message">
       <UTextarea v-model="state.message" :rows="5" />
     </UFormField>
 
@@ -20,7 +25,7 @@
     </UFormField>
 
     <UButton type="submit">
-      Submit
+      Отправить
     </UButton>
   </UForm>
 </template>
@@ -28,6 +33,9 @@
 <script setup lang="ts">
 import * as v from 'valibot'
 import type { FormSubmitEvent } from '@nuxt/ui'
+import { vMaska } from 'maska/vue'
+
+const phoneMask = '+7 (###) ###-##-##'
 
 const schema = v.object({
   name: v.pipe(
@@ -37,8 +45,12 @@ const schema = v.object({
   ),
   phone: v.pipe(
       v.string(),
-      v.minLength(7, 'неверный формат номера'),
-      v.maxLength(15, 'неверный формат номера')
+      v.minLength(18, 'неверный формат номера'),   // +7 (777) 777-77-77 = 18
+      v.maxLength(18, 'неверный формат номера'),
+      v.check(
+          (val) => (val.match(/\d/g) || []).length >= 11,
+          'номер должен содержать 11 цифр'
+      )
   ),
   message: v.pipe(
       v.string(),

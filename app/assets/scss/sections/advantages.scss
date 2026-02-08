@@ -41,7 +41,6 @@
     &__wrap {
         display: grid;
         grid-template-columns: 64.1% 34.7%;
-        grid-template-rows: 1fr 1fr;
         row-gap: 21px;
         justify-content: space-between;
 
@@ -176,6 +175,134 @@
         }
     }
 
+
+    @media (max-width: 1024px) {
+        padding: 10px 0;
+        max-width: 382px;
+        margin: 0 auto;
+
+        &__head {
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            &-title {
+                font-size: 24px;
+                line-height: 29px;
+
+                &::before {
+                    margin-bottom: 16px;
+                    content: "С чем я работаю";
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-transform: uppercase;
+                }
+            }
+
+            &-desc {
+                display: none;
+            }
+        }
+
+        &__wrap {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 40px;
+
+            &-first {
+                grid-template-columns: 1fr;
+                grid-row-gap: 40px;
+            }
+
+            &-second {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            &-third {
+                grid-template-columns: 1fr;
+                grid-row-gap: 40px;
+            }
+        }
+
+        &__item {
+            min-height: 270px;
+            padding: 27px 25px;
+            border-radius: 30px;
+
+            &-title {
+                margin-bottom: 10px;
+                font-size: 18px;
+                line-height: 22px;
+
+            }
+
+            &-desc {
+                max-width: 310px;
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            .icon {
+                background-size: contain;
+            }
+
+            &-1 {
+                .icon {
+                    right: 0;
+                    width: 100%;
+                    height: 214px;
+                }
+            }
+
+            &-2 {
+                padding-left: 25px;
+
+                .icon {
+                    right: 0;
+                    width: 100%;
+                    height: 190px;
+                }
+            }
+
+            &-3 {
+                min-height: 465px;
+
+                .icon {
+                    right: 0;
+                    bottom: -48px;
+                    width: 100%;
+                }
+            }
+
+            &-4 {
+                padding-left: 25px;
+
+                .icon {
+                    right: 0;
+                    width: 100%;
+                }
+            }
+
+            &-5 {
+                padding-left: 25px;
+                padding-top: 27px;
+                background: #8945F7;
+
+                .advantages__item-title,
+                .advantages__item-desc {
+                    color: #FFFFFF;
+                }
+
+                .icon {
+                    right: 0;
+                    bottom: -12px;
+                    width: 100%;
+                    height: 210px;
+                }
+            }
+        }
+
+    }
 
 }
 
